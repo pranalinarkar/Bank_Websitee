@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Axis Bank</title>
+
+<style>
+body {
+	background-color: #f0f0f0;
+}
+
+div {
+	padding-top: 60px font-size:20px;
+	font-style: italic
+}
+
+h2 {
+	padding-top: 50px;
+	font-size: 30px;
+	font-style: italic;
+	color: #91000a;
+}
+
+#electric_select {
+	display: none;
+	align: center;
+}
+
+#phone_select {
+	display: none;
+}
+
+.navbar {
+	overflow: hidden;
+	background-color: #333;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-right: 50px;
+}
+
+.navbar a {
+	float: left;
+	font-size: 16px;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.dropdown {
+	float: left;
+	overflow: hidden;
+}
+
+.dropdown .dropbtn {
+	font-size: 16px;
+	border: none;
+	outline: none;
+	color: white;
+	padding: 14px 16px;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+	background-color: #91000a;
+}
+
+form {
+	padding-left: 450px;
+}
+</style>
+<script>
+	
+</script>
+</head>
+<body>
+	<div class="navbar">
+		<a href="indexx1.html">Home</a> <a href="accounts.jsp">Accounts</a> <a
+			href="Bills.jsp">Bills</a> <a href="Logout">Logout</a>
+
+
+	</div>
+
+
+
+	<h2 align="center">Enter your details for bill payment</h2>
+	<form action="pay-bills.do" method="post">
+
+		<div>
+			Account no: <input type="text" name="accno" required /><br />
+		</div>
+		<div>
+			<input type="radio" name="title" value="Electric Bill" id="ele_radio">Electric
+			Bill <input type="radio" name="title" value="Phone Bill"
+				id="phone_radio">Phone Bill <select name="Provider1"
+				id="electric_select">
+				<option value="SELECT">SELECT</option>
+				<option value="MSEB">MSEB</option>
+				<option value="TATA">TATA</option>
+				<option value="RELIANCE">RELIANCE</option>
+			</select>
+		</div>
+		<div>
+			<select name="Provider2" id="phone_select">
+				<option value="SELECT">SELECT</option>
+				<option value="MTNL">MTNL</option>
+				<option value="JIO">JIO</option>
+				<option value="AIRTEL">AIRTEL</option>
+				<option value="VODAFONE">VODAFONE</option>
+				<option value="IDEA">IDEA</option>
+			</select>
+		</div>
+		<br>
+		<br>
+
+		<div>
+			Amount :<input type="number" name="amt" required />
+		</div>
+		<br />
+		<div>
+			<input type="submit" value="Submit" align="center">
+		</div>
+	</form>
+	<script>
+		var eleRadio = document.getElementById("ele_radio");
+		var phoneRadio = document.getElementById("phone_radio");
+
+		eleRadio.checked = false;
+		phoneRadio.checked = false;
+
+		var eleSelect = document.getElementById("electric_select");
+		var phoneSelect = document.getElementById("phone_select");
+
+		eleRadio.addEventListener("click", function() {
+			if (eleRadio.checked) {
+				eleSelect.style.display = "block";
+				phoneSelect.style.display = "none";
+			}
+		}, false);
+
+		phoneRadio.addEventListener("click", function() {
+			eleSelect.style.display = "none";
+			phoneSelect.style.display = "block";
+		}, false);
+	</script>
+</body>
+</html>

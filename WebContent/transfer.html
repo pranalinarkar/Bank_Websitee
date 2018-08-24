@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+body {
+	background-color: #f0f0f0;
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.main {
+	padding-left: 450px;
+	padding-top: 40px;
+}
+
+div {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 20px;
+	font-style: italic
+}
+
+form {
+	padding-left: 500px;
+}
+
+h2 {
+	padding-top: 50px;
+	font-size: 30px;
+	font-style: italic;
+	color: #91000a;
+}
+
+.navbar {
+	overflow: hidden;
+	background-color: #333;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-right: 50px;
+	padding-top: 0;
+	padding-bottom: 0
+}
+
+.navbar a {
+	float: left;
+	font-size: 16px;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.dropdown {
+	float: left;
+	overflow: hidden;
+}
+
+.dropdown .dropbtn {
+	font-size: 16px;
+	border: none;
+	outline: none;
+	color: white;
+	padding: 14px 16px;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+	background-color: #91000a;
+}
+
+form {
+	padding-left: 450px;
+}
+</style>
+
+</head>
+<body>
+	<div class="navbar">
+		<a href="indexx1.html">Home</a> <a href="accounts.jsp">Accounts</a> <a
+			href="Bills.jsp">Bills</a> <a href="Logout">Logout</a>
+
+
+	</div>
+	<form action="transfer.do" method="post">
+		<h2>Enter the details</h2>
+		<div>
+			Source Account No: <input type="text" name="accno1" /><br />
+		</div>
+		<div>
+			Destination Account No: <input type="text" name="accno2" /><br />
+		</div>
+		<div>
+			Amount: <input type="text" name="amt" /><br />
+		</div>
+		<div>
+			<input type="submit" value="Submit">
+		</div>
+	</form>
+</body>
+</html>

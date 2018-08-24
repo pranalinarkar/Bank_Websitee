@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+body {
+	background-color: #f0f0f0;
+}
+
+.main {
+	padding-left: 450px;
+	padding-top: 40px;
+}
+
+div {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 20px;
+	font-style: italic
+}
+
+div form {
+	margin: 40px;
+	width: 40%;
+}
+
+h2 {
+	padding-top: 50px;
+	font-size: 30px;
+	font-style: italic;
+	color: #91000a;
+}
+</style>
+</head>
+<body>
+	<h2 align="center">Enter your details for new account</h2>
+	<div class="main">
+		<form action="new_account.do" method="post">
+
+			<div>
+				Id: <input type="text" name="id" /><br />
+			</div>
+			<div>
+				Type:<input type=radio name="type" value="Saving">Saving <input
+					type=radio name="type" value="Current">Current <br />
+			</div>
+			<div>
+				Balance <input type="number" name="balance" /><br />
+			</div>
+			<div>
+				<input type="submit" value="Submit">
+			</div>
+		</form>
+	</div>
+</body>
+</html>
