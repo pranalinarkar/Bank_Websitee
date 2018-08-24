@@ -24,7 +24,7 @@ public class Transaction {
 		if (balance1==null) {
 			return false;	
 		}
-		
+		System.out.println(balance1);
 		
 		balance = Double.parseDouble(balance1);
 		if (balance >= amount) {
